@@ -19,6 +19,11 @@ import InputBase from "@mui/material/InputBase";
 import SearchIcon from "@mui/icons-material/Search";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
+import MailIcon from "@mui/icons-material/Mail";
+import NotificationsIcon from "@mui/icons-material/Notifications";
+import Badge from "@mui/material/Badge";
+import AccountCircle from "@mui/icons-material/AccountCircle";
+import MoreIcon from "@mui/icons-material/MoreVert";
 
 const Header = () => {
   const myStyle = { text: "white", backgroundColor: "DodgerBlue" };
@@ -218,14 +223,14 @@ export default function Dashboard() {
                 component="div"
                 sx={{ display: { xs: "none", sm: "block" } }}
               >
-                MUI
+                Ouroboros
               </Typography>
               <Search>
                 <SearchIconWrapper>
                   <SearchIcon />
                 </SearchIconWrapper>
                 <StyledInputBase
-                  placeholder="Search…"
+                  placeholder="Search User"
                   inputProps={{ "aria-label": "search" }}
                 />
               </Search>
@@ -280,7 +285,6 @@ export default function Dashboard() {
         </Box>
       </div>
 
-      {/* hey its me Table dont touch me */}
       <section>
         <TableContainer component={Paper} className=" textcenter">
           <Table sx={{ minWidth: 650 }} aria-label="simple table">
@@ -303,8 +307,6 @@ export default function Dashboard() {
           </Table>
         </TableContainer>
       </section>
-      {/* table ends.  */}
-      <div></div>
     </div>
   );
 }
