@@ -1,4 +1,5 @@
 import { Component } from "react";
+import { NavMenuItems } from "./NavMenuItems";
 
 class Navbar extends Component {
   render() {
@@ -12,14 +13,6 @@ class Navbar extends Component {
           <li>
             <i class="fa fa-home" aria-hidden="true"></i>
             Home
-          </li>
-          <li>
-            <i class="fa fa-compass" aria-hidden="true"></i>
-            Explore
-          </li>
-          <li>
-            <i class="fa fa-user-circle" aria-hidden="true"></i>
-            My Profile
           </li>
         </ul>
       </nav>
