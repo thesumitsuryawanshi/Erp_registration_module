@@ -24,6 +24,7 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 import Badge from "@mui/material/Badge";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import MoreIcon from "@mui/icons-material/MoreVert";
+import Navbar from "../Nav/Navbar";
 
 const Header = () => {
   const myStyle = { text: "white", backgroundColor: "DodgerBlue" };
@@ -205,108 +206,29 @@ export default function Dashboard() {
   return (
     <div>
       <div>
-        <Box sx={{ flexGrow: 1 }}>
-          <AppBar position="static">
-            <Toolbar>
-              <IconButton
-                size="large"
-                edge="start"
-                color="inherit"
-                aria-label="open drawer"
-                sx={{ mr: 2 }}
-              >
-                <MenuIcon />
-              </IconButton>
-              <Typography
-                variant="h6"
-                noWrap
-                component="div"
-                sx={{ display: { xs: "none", sm: "block" } }}
-              >
-                Ouroboros
-              </Typography>
-              <Search>
-                <SearchIconWrapper>
-                  <SearchIcon />
-                </SearchIconWrapper>
-                <StyledInputBase
-                  placeholder="Search User"
-                  inputProps={{ "aria-label": "search" }}
-                />
-              </Search>
-              <Box sx={{ flexGrow: 1 }} />
-              <Box sx={{ display: { xs: "none", md: "flex" } }}>
-                <IconButton
-                  size="large"
-                  aria-label="show 4 new mails"
-                  color="inherit"
-                >
-                  <Badge badgeContent={4} color="error">
-                    <MailIcon />
-                  </Badge>
-                </IconButton>
-                <IconButton
-                  size="large"
-                  aria-label="show 2 new notifications"
-                  color="inherit"
-                >
-                  <Badge badgeContent={2} color="error">
-                    <NotificationsIcon />
-                  </Badge>
-                </IconButton>
-                <IconButton
-                  size="large"
-                  edge="end"
-                  aria-label="account of current user"
-                  aria-controls={menuId}
-                  aria-haspopup="true"
-                  onClick={handleProfileMenuOpen}
-                  color="inherit"
-                >
-                  <AccountCircle />
-                </IconButton>
-              </Box>
-              <Box sx={{ display: { xs: "flex", md: "none" } }}>
-                <IconButton
-                  size="large"
-                  aria-label="show more"
-                  aria-controls={mobileMenuId}
-                  aria-haspopup="true"
-                  onClick={handleMobileMenuOpen}
-                  color="inherit"
-                >
-                  <MoreIcon />
-                </IconButton>
-              </Box>
-            </Toolbar>
-          </AppBar>
-          {renderMobileMenu}
-          {renderMenu}
-        </Box>
-      </div>
-
-      <section>
-        <TableContainer component={Paper} className=" textcenter">
-          <Table sx={{ minWidth: 650 }} aria-label="simple table">
-            <TableHead>
-              <TableRow>
-                <TableCell align="right">Name</TableCell>
-                <TableCell align="right">Mobile No </TableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {Users.map((row) => (
-                <TableRow
-                  sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-                >
-                  <TableCell align="right">{row.Username}</TableCell>
-                  <TableCell align="right">{row.mobileno}</TableCell>
+        <section>
+          <TableContainer component={Paper} className=" textcenter">
+            <Table sx={{ minWidth: 650 }} aria-label="simple table">
+              <TableHead>
+                <TableRow>
+                  <TableCell align="right">Name</TableCell>
+                  <TableCell align="right">Mobile No </TableCell>
                 </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </TableContainer>
-      </section>
+              </TableHead>
+              <TableBody>
+                {Users.map((row) => (
+                  <TableRow
+                    sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                  >
+                    <TableCell align="right">{row.Username}</TableCell>
+                    <TableCell align="right">{row.mobileno}</TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </TableContainer>
+        </section>
+      </div>
     </div>
   );
 }

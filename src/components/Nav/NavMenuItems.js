@@ -17,4 +17,10 @@ export const NavMenuItems = [
     cName: "nav-links",
     icon: "fa fa-user-circle",
   },
+  {
+    title: " ",
+    url: "#",
+    cName: "nav-links",
+    icon: "fa fa-sign-out",
+  },
 ];

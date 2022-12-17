@@ -7,19 +7,21 @@ import Navbar from "./components/Nav/Navbar";
 
 export default function App() {
   return (
-    <div className="App">
-      <Router>
-        <Routes>
-          {/* <Route path="/" element={<Dashboard />} /> */}
-          <Route path="/" element={<Navbar />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signin" element={<Form />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-        </Routes>
-      </Router>
-
-      {/* <Login></Login> */}
-      {/* <Form> </Form> */}
+    <div>
+      <Navbar />
+      <div className="App">
+        <Router>
+          <Routes>
+            {/* <Route path="/" element={<Dashboard />} /> */}
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signin" element={<Form />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+          </Routes>
+        </Router>
+        {/* <Login></Login> */}
+        {/* <Form> </Form> */}
+      </div>
     </div>
   );
 }
